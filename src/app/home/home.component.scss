@@ -1,0 +1,28 @@
+
+.container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+
+    place-items: center;
+
+    // background: radial-gradient( circle, transparent 50%, white 150%), black;
+    background: rgb(17, 17, 17);
+
+    .in-container{
+
+        display: flex;
+        flex-direction: column;
+
+        place-items: center;
+
+        .holder {
+            border-radius: 50px;
+            padding: 50px;
+            color: white;
+            //background: hotpink;
+            font-size: large;
+        }
+    }
+    
+}
