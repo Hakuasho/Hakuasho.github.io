@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { PlusEventComponent } from '../plus-event/plus-event.component';
+import { PlusEventComponent } from '../pages/plus-event/plus-event.component';
 
 import { EventsRoutingModule } from './events-routing.module';
 import { EventsComponent } from './events.component';

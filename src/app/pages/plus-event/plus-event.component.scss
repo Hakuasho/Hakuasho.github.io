@@ -1,0 +1,244 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+$header-size: 3.5rem;
+
+header {
+    width: 100%;
+    height: $header-size;
+    background-color: #f06358;
+
+    .h-container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        place-items: center;
+
+        margin-inline: 2rem;
+        color: white;
+        font-weight: bold;
+
+        .abt {
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+
+}
+
+.count-down {
+    height: calc(20vh - $header-size);
+    background-color: #ecdbce;
+
+    .cd-container {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        font-weight: bolder;
+        font-size: 4rem;
+
+        div {
+            height: 100%;
+            width: 10rem;
+            display: grid;
+            place-items: center;
+        }
+    }
+}
+
+
+.about {
+    width: 100%;
+    height: calc(50vh - $header-size);
+
+    background-color: #c5e6d1;
+    display: grid;
+    place-items: center;
+    
+    .a-container {
+        display: flex;
+        color: white;
+        height: 100%;
+        align-items: center;
+
+        .a-title {
+            font-weight: bolder;
+            font-size: 500%;
+            display: flex;
+            text-align: end;
+            flex-direction: column;
+        }
+
+        .a-about-us {
+            margin: 1.2rem;
+            width: 100%;
+            line-height: 2rem;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    .about {
+        .a-container {
+            flex-direction: column;
+            margin-top: 20%;
+
+            .a-title {
+                flex-direction: row;
+                font-size: 2rem;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 5%;
+            }
+
+            .a-about-us {
+                line-height: 1.3rem;
+                text-align: center;
+                div {
+                    margin: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+.univ {
+    width: 100%;
+    height: calc(20vh - $header-size);
+    background-color: #ecdbce;
+    color: white;
+    font-size: 400%;
+    font-weight: bolder;
+    .u-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .u-univ, .u-logo {
+            width: 4rem;
+            height: 4rem;
+
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .u-univ {
+            background-image: url('../../../assets/Logo_Univ_Jijel.png');
+        }
+
+        .u-logo {
+            background-image: url('../../../assets/pluslogo.svg');
+        }
+    }
+}
+
+.p-schedule {
+    width: 100%;
+    height: calc(70vh - $header-size);
+    background-color: #8ad8d0;
+
+    display: flex;
+    flex-direction: column;
+
+    .s-title {
+        flex: 10%;
+        color: white;
+        font-weight: bold;
+        font-size: x-large;
+
+        padding-left: 3rem;
+        padding-top: 3rem;
+    }
+
+    .s-schedule {
+        position: relative;
+        flex: 90%;
+        display: flex;
+
+        justify-content: space-evenly;
+        
+        .d1, .d2, .d3 {
+            background-color: white;
+            border-radius: 50px 50px 50px 50px;
+            width: 15%;
+            height: 70%;
+
+            display: flex;
+            flex-direction: column;
+
+            padding: 1.5rem;
+        }
+
+        .d-title {
+            flex: 10%;
+
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .d-desc {
+            flex: 90%;
+            font-weight: 600;
+            color: rgb(75, 75, 75);
+            text-align: center;
+        }
+    }
+}
+
+.p-welcome {
+    width: 100%;
+    height: calc(90vh - $header-size);
+    background-image: linear-gradient(0deg, #ffac7cb6, #ffac7cb6);//, url('../../../assets/hdpv.jpg');
+    // background-size: contain;
+    // background-repeat: no-repeat;
+
+    display: grid;
+    place-items: center;
+    
+    .w-container {
+        width: 70%;
+        height: 70%;
+
+        display: flex;
+        flex-direction: column;
+
+        .w-title {
+            flex: 10%;
+            text-align: center;
+            font-size: x-large;
+            font-weight: bold;
+            color: #0a57a1;
+        }
+        .w-ename {
+            flex: 10%;
+            display: grid;
+            place-items: center;
+            font-size: 300%;
+            color: #1db2b8;
+            font-weight: bold;
+            word-spacing: 1rem;
+            letter-spacing: 1.5rem;
+        }
+        .w-edesc {
+            flex: 80%;
+            text-align: center;
+            color: #316b66;
+        }
+    }
+}
+
