@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { PlusEventComponent } from '../pages/plus-event/plus-event.component';
 
@@ -10,7 +11,8 @@ import { EventsComponent } from './events.component';
     PlusEventComponent
   ],
   imports: [
-    EventsRoutingModule
+    EventsRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [EventsComponent]
