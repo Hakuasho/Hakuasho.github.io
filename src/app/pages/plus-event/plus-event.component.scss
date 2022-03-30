@@ -120,7 +120,7 @@ header {
 
 .p-welcome {
     width: 100%;
-    height: calc(60vh - $header-size);
+    height: calc(100vh - $header-size);
     background-image: linear-gradient(0deg, #ffac7cb6, #ffac7cb6), url('../../../assets/hdpv.jpg');
     background-size: contain;//contain;
     //background-repeat: no-repeat;
@@ -131,23 +131,37 @@ header {
 
         padding-block: 5%;
 
+        display: flex;
+        flex-direction: column;
+
 
         .w-title {
             width: 100%;
+            flex: 70%;
             height: fit-content;
 
             display: flex;
             justify-content: center;
 
+            
+            background-image: url('../../../assets/pluslogo.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            opacity: 50%;
+            
+            filter: invert(1);
+            
             img {
-                width:  30%;
-                height: 30%;
+                width:  100%;
+                height: 100%;
 
                 filter: invert(1);
                 opacity: 50%;
             }
         }
         .w-ename {
+            flex: 30%;
             display: grid;
             place-items: center;
             font-size: 300%;

@@ -14,7 +14,7 @@ interface Workshop {
 })
 export class PlusEventComponent implements OnInit, OnDestroy {
 
-  private eventDate: Date = new Date(2022, 3, 23);
+  private eventDate: Date = new Date(2022, 2, 23);
   private intervalId: any;
 
   public today: Date;
@@ -31,15 +31,30 @@ export class PlusEventComponent implements OnInit, OnDestroy {
 
 
   constructor() {
-    this.today = new Date(2022, 3, 23);
+    this.today = new Date();
     this.calcTimeLeft();
   }
 
   calcTimeLeft() {
-    const now = new Date();
+    const now = new Date;
     // @ts-ignore
     const timeLeft = new Date(this.eventDate - now);
 
+    /*console.log(this.eventDate);
+    // @ts-ignore
+    let a = Math.round((now - this.eventDate) / (1000 * 60 * 60 * 24));
+
+    console.log(a);
+    */
+   
+    if(timeLeft.getTime() <= 0) {
+      this.daysLeft    = 0;
+      this.hoursLeft   = 0;
+      this.minutesLeft = 0;
+      this.secondsLeft = 0;
+
+      return;
+    }
     
     this.daysLeft    = timeLeft.getDate();
     this.hoursLeft   = timeLeft.getHours();
